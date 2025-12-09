@@ -1,0 +1,39 @@
+Ok now we have a new class , MediaFile, 
+what will be the purpose of this class?
+IM thinking its only purpose will be to identify and handle the organisation of media files. 
+so the separate classes of media files ie imgage class video class etc , wont inherit anything from this class.
+It will however inherit From the file class.
+I think this is the best way to structure it without overcomplicating things. 
+Because from this point we start introducing class attributes.
+
+ok so we can continue from here tommorow.
+
+new class MediaFile will inherit all attributes and methods from the File class.
+inherited attributes:
+1- self.path - turns a file into a path object
+2- self.name - stores the name of the file
+3- self.size 
+4- self.location
+and the methods:
+1- hash function
+2- getters and setters for name and location
+3- formated size
+4- __repr__method
+
+
+the media file class will have all these attributes and methods plus additional ones.
+
+
+
+class attributes: an access point for defining media types
+instance attributes:
+media type - defines the media type of the file (image, video, audio, document etc)
+
+
+ok this is almost done. we just need to define the 4 media classes
+go a bit deeper on oop concepts such as polymorphism and encapsulation
+class methods dunder methods etc
+
+we will then go over the whole project for logging and error handling.
+then lastly we will create a simple cli first then put it on github
+after we will slowly start on working on a gui for the file manager.

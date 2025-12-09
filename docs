@@ -1,0 +1,79 @@
+Project documentation.
+
+This project started as a simple duplicate finder.
+
+classes:
+1- File: This is the base class, representing any object that is not a directory.
+         It takes in a path as an argument.
+
+   definitions:
+   - atributes - in oop these are variables that belong to each instance / occurrence of the object in a given class.
+                 eg: name, path, size etc (placeholder for actual values)
+                 These atributes are defined in the __init__ method of the class.
+                 The __init__ method is function just like any other function, but it is specifally used to initialize the class attributes, and is called automatically when a new instance of the class is created.
+   - methods - In oop these are functions that belong to each instance / occurrence of the object in a given class.
+               eg: rename(), move(), copy etc.
+               The methods are defined after the __init__ method of the class. And they can define some of the attributes of the class as well. And they can also perform actions on the attributes of the class.
+
+  Each instance of the File object has got the following atributes and methods.
+
+    FILE CLASS ATTRIBUTES: 
+        
+  1- self.path: This atribute uses the Pathlib module to turn the file path into a path object.
+  2- self.name: This attribute stores the name of the file by using pathlibs .name method to strip out the name of the file from the path. 
+          The self.__name is a private attribute , this means that the attribute cant be accessed directly from outside the class. 
+          Double underscores before the attribute name makes it private, so it can only be accessed from the class itself using getter and setter methods(@property decorator wich allows controlled access to the private attribute).
+                                   (@setter decorator allows controlled modification of the private attribute).
+  3- self.size: This attribute stores the size of the file in bytes by using os.path.getsize() method.
+  4- self.location: This attribute stores the directory location of the file by using pathlibs .parent method to get the parent directory of the file.
+
+
+   FILE CLASS METHODS:
+
+   1- Hash function: This function generates a hash value for the file using the hashlib module.
+      The hashlib module provides a way to create hash values for any data. A hash value is a unique identifier for a piece of of data. It is created by applying a hash algorithm to the data. The most common hash algorithms are MD5, SHA1, SHA256 etc.
+      The hash function reads the file in chunks of a given size of bytes and updates the hash object with each chunk. This is done to avoid loading the entire file into memory at once, which can be inefficient for large files.
+      The function returns the hexadecimal representation of the hash value.
+
+   2- We have getters and setters for the private attributes self.__name and self.__location.
+      The getter methods allow controlled access to the private attributes from outside the class.
+      The setter methods allow controlled modification of the private attributes from outside the class.
+      These function allow us to get controlled read access and write access to the private attributes.
+
+   3- size in kb: This method returns the size of the file in kilobytes by dividing the size in bytes by 1024.
+
+   4- __repr__: This method returns a string representation of the File object, showing the name and size of the file.
+
+
+FILES CLASS: This class defines a special type of object wich is a list of file objects. 
+  each instance of the Files object has got the following atributes and methods.
+
+    FILES CLASS ATTRIBUTES: 
+    self.path: a pathlib object representing the directory path where the files are located.
+    self.files: a list of File objects representing all the files in the directory.
+
+    FILES CLASS METHODS:
+
+    1- Scan directory: This function uses pathlibs .rglob('*') method and scans only the current working directory or the specified directory for any files.
+        It then turns each file found into a File object and appends it to the list. 
+
+    2- deep scan: This function uses os.walk() method to recursively(meaning it goes through the base directory and all its subdirectories, os.walk returns a tupple of three values, the current directory path, the list of directories in the current directory, and the list of files in the current directory, it does this for every directory it finds within the contents and tree folder of the base directory) 
+    It then only returns files, turns each file found into a File Object and appends it to the list
+
+    3- delete duplicates: This function simply takes in a list of duplicate files(file paths), it is not responsible for finding the duplicates, its just responsible for deleting them, or just moving them into one specified directory
+
+
+FILE HASHER CLASS:This class takes in a FILES object as an argument and has the following attributes and methods.
+
+  FILE HASHER CLASS ATTRIBUTES:
+  1- self.files: This attribute stores the FILES object passed as an argument.
+  2- self.hash_dict: This attribute is a dictionary that stores the hashes of each individual file as values to their corresponding file paths as keys.
+  
+  FILE HASHER CLASS METHODS:
+  1 - hash files: This methods iterates through each individual file in the FILES object, and uses the hash method from the FILE class to generate a hash for each file.
+      It then stores the hash as a value to the corresponding file path as a key in the hash_dict attribute.
+  2- find duplicates: This method iterates through the hash_dict attribute and finds any hash duplicates and stores their relative file paths in a list.
+  it then returns a list of file paths that are duplicates.
+
+
+  
