@@ -93,13 +93,5 @@ class Files: #this is an object with a collection of hashed files and their path
 
 
 
-path = r"C:\Users\User\OneDrive\Documents\coding\sims"
-
-files = Files(path)
-files.sort_by_mtype()
 
 
-
-#Ok first problem we cant seem to move the audio files 
-#its createting more than one sorted files folder
-#  including inside the folders wich are being created wich is not what we want 
