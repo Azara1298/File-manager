@@ -101,5 +101,6 @@ cd file-manager
 This project is open source and available under the MIT License.
 
 ## Author
+This is my first python project. I started learning python a few january 2025 i was on and of because of work and life commitments but now im fully commited to learning python and becoming a proficient python developer.
 
-Your Name - First Project
+Azara Money Makonnen - First Project
