@@ -92,7 +92,7 @@ cd file-manager
 - Complete the `sort_by_mtype()` implementation
 - Add file move operations with proper location handling
 - Add configuration file support
-- Add command-line interface
+- Add a command-line interface
 - Add unit tests
 - Add more file type categories
 
@@ -101,7 +101,7 @@ cd file-manager
 This project is open source and available under the MIT License.
 
 ## Author
-This is my first python project. I started learning python a few january 2025 i was on and of because of work and life commitments but now im fully commited to learning python and becoming a proficient python developer.
-Ps it might be a while before i finish this project as i am still learning some other concepts and it all gets a bit overwhelming at times but i will get there eventually.
+This is my first Python project. I started learning Python in January 2025. I was on and off, because of work and other life commitments, but now I'm fully committed to learning Python and becoming a proficient Python developer.
+P.S. It might be a while before I finish this project as I am still learning some other concepts and it all gets a bit overwhelming at times, but I will get there eventually.
 
 Azara Money Makonnen - First Project
