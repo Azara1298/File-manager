@@ -29,7 +29,7 @@ def main():
 
     print(f"Using directory: {dir_path}")
 
-    # Your existing workflow
+    
     files = Files(dir_path)
     files.deep_scan_directory()
 
