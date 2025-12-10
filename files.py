@@ -27,7 +27,7 @@ class Files: #this is an object with a collection of hashed files and their path
       base_path = self.path
 
       if base_path.exists() and base_path.is_dir():
-         for folder,subfolders, files, in os.walk(base_path): #os.walk() is a method that goea through a directory and all the tree directories 
+         for folder,subfolders, files, in os.walk(base_path): #os.walk() is a method that goes through a directory and all the tree directories 
             #and returns a tuple of (folder_path,names of subfolders in the path, and the files in the path)
             folder_path = Path(folder) 
             for f in files:
@@ -47,7 +47,7 @@ class Files: #this is an object with a collection of hashed files and their path
          if dup_path.exists():
              shutil.move(str(dup_path), str(new_location))
      
-     print("Duplicates moved to 'duplicates' folder")
+     
 
      
      return None

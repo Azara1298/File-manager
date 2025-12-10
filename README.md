@@ -21,7 +21,7 @@ file_manager/
 ├── docs/              # Project documentation
 └── README.md          # This file
 ```
-
+##Still working on my naming conventions
 ## Classes
 
 ### File (`sketch.py`)
